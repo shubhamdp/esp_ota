@@ -6,4 +6,4 @@ Since as of now we do not have any tool to add the Matter OTA header to the imag
 
 ## Images
 - ESP32   - [hello_world.bin](esp32/hello_world.bin)
-- ESP32C3 - [hello_world.bin](esp32c3/hello_world.bin)
+- ESP32C3 - [hello_world.bin](esp32c3/hello_world_c3.bin)
