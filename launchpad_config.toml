@@ -8,12 +8,8 @@ firmware_images_url = "https://shubhamdp.github.io/esp_ota/esp32s3/"
 # There should be a config section per listed App
 supported_apps = ["S3 Switch"]
 
-
 [S3 Switch]
-# ESP32 Chipsets for which you have a supported Firmware App. Define a property for each supported chipset in the given format.
 chipsets = ["ESP32-S3"]
-# Configure the name of the binary file
 image.esp32-s3 = "s3_switch.bin"
-# Optional: Phone APP URLs if any for Playstores
 android_app_url = ""
 ios_app_url = ""
