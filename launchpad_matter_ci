@@ -1,9 +1,9 @@
 esp_toml_version = 1.0
 
 # Base URL of the file server where the images are available
-firmware_images_url = "https://shubhamdp.github.io/esp-matter/images/"
+firmware_images_url = "https://shubhamdp.github.io/esp-matter/"
 
-supported_apps = ["CHIP-Lighting-app", "CHIP-All-Clusters-App", "ESP-Matter-Light", "ESP-Matter-Light-Switch", "ESP-Matter-BLE-Mesh-Bridge", "ESP-Matter-ZigBee-Bridge", "ESP-Matter-ZAP-Light"]
+supported_apps = ["CHIP-Lighting-app", "CHIP-All-Clusters-App", "ESP-Matter-Light", "ESP-Matter-Light-Switch", "ESP-Matter-ZAP-Light"]
 
 [CHIP-Lighting-app]
 image.esp32 = "esp32_chip-lighting-app.bin"
@@ -26,18 +26,6 @@ android_app_url = ""
 [ESP-Matter-Light-Switch]
 image.esp32 = "esp32_light_switch.bin"
 image.esp32-c3 = "esp32c3_light_switch.bin"
-ios_app_url = "https://apps.apple.com/app/espressif-matter/id1604739172?platform=iphone"
-android_app_url = ""
-
-[ESP-Matter-BLE-Mesh-Bridge]
-image.esp32 = "esp32_blemesh_bridge.bin"
-image.esp32-c3 = "esp32c3_blemesh_bridge.bin"
-ios_app_url = "https://apps.apple.com/app/espressif-matter/id1604739172?platform=iphone"
-android_app_url = ""
-
-[ESP-Matter-ZigBee-Bridge]
-image.esp32 = "esp32_zigbee_bridge.bin"
-image.esp32-c3 = "esp32c3_zigbee_bridge.bin"
 ios_app_url = "https://apps.apple.com/app/espressif-matter/id1604739172?platform=iphone"
 android_app_url = ""
 
