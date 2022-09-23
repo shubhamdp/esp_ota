@@ -4,26 +4,26 @@ firmware_images_url = "https://shubhamdp.github.io/esp-matter/"
 supported_apps = ["chip-all-clusters-app","chip-lighting-app","light","light_switch","zap_light"]
 
 [chip-all-clusters-app]
-CHIPSETS = ["ESP32","ESP32-C3"]
+chipsets = ["ESP32","ESP32C3"]
 image.esp32 = "esp32_chip-all-clusters-app.bin"
-image.esp32-c3 = "esp32c3_chip-all-clusters-app.bin"
+image.esp32c3 = "esp32c3_chip-all-clusters-app.bin"
 
 [chip-lighting-app]
-CHIPSETS = ["ESP32","ESP32-C3"]
+chipsets = ["ESP32","ESP32C3"]
 image.esp32 = "esp32_chip-lighting-app.bin"
-image.esp32-c3 = "esp32c3_chip-lighting-app.bin"
+image.esp32c3 = "esp32c3_chip-lighting-app.bin"
 
 [light]
-CHIPSETS = ["ESP32","ESP32-C3"]
+chipsets = ["ESP32","ESP32C3"]
 image.esp32 = "esp32_light.bin"
-image.esp32-c3 = "esp32c3_light.bin"
+image.esp32c3 = "esp32c3_light.bin"
 
 [light_switch]
-CHIPSETS = ["ESP32","ESP32-C3"]
+chipsets = ["ESP32","ESP32C3"]
 image.esp32 = "esp32_light_switch.bin"
-image.esp32-c3 = "esp32c3_light_switch.bin"
+image.esp32c3 = "esp32c3_light_switch.bin"
 
 [zap_light]
-CHIPSETS = ["ESP32","ESP32-C3"]
+chipsets = ["ESP32","ESP32C3"]
 image.esp32 = "esp32_zap_light.bin"
-image.esp32-c3 = "esp32c3_zap_light.bin"
+image.esp32c3 = "esp32c3_zap_light.bin"
