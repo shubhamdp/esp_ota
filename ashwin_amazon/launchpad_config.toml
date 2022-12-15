@@ -1,17 +1,12 @@
 esp_toml_version = 1.0
-
-# This should be a publicly accessible URL of the file server where your firmware binaries are available for download
 firmware_images_url = "https://shubhamdp.github.io/esp_ota/ashwin_amazon/"
 
-# Apps that you support and for which the binaries are available to publish. You can have multiple apps as a comma separated list
-# The launch pad UI will automatically show these Apps in the available apps dropdown
-# There should be a config section per listed App
-supported_apps = ["C3 Fist Light", "C3 Second Light"]
+supported_apps = ["C3_Fist_Light", "C3_Second_Light"]
 
-[C3 First Light]
-chipsets = ["ESP32-C3"]
-image.esp32-c3 = "amazon_dev1.bin"
+[C3_Fist_Light]
+chipsets = ["ESP32C3"]
+image.esp32c3 = "amazon_dev1.bin"
 
-[C3 Second Light]
-chipsets = ["ESP32-C3"]
-image.esp32-c3 = "amazon_dev2.bin"
+[C3_Second_Light]
+chipsets = ["ESP32C3"]
+image.esp32c3 = "amazon_dev2.bin"
