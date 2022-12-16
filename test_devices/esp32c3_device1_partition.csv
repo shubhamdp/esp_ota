@@ -1,0 +1,15 @@
+key,type,encoding,value
+chip-factory,namespace,,
+discriminator,data,u32,1053
+iteration-count,data,u32,10000
+salt,data,string,xsnvjj52Dr3F4/PicgCPQFQAWmLjsWqdR9jMyWId3R8=
+verifier,data,string,LKFIfhl+T0uVib4z/wnOIrEOR0+MtwY5eXgT3orugbwEwfXAzWwwhJ3lgUvvvEDYlX7exgHqw0x1oGw4bxSh5CKf/0s/xdWTPoTd8zfcIchLkBl/55ypkKldoU7Ax8VuoA==
+cert-dclrn,file,binary,/Users/shubhampatil/Downloads/cd_131b_0000.der
+vendor-id,data,u32,65521
+vendor-name,data,string,Espressif
+product-id,data,u32,32768
+product-name,data,string,LightBulb
+hardware-ver,data,u32,1
+hw-ver-str,data,string,ESP32-C3-DevKit-M1
+rd-id-uid,data,hex2bin,459342aed96bb3b79986e745c574d024
+serial-num,data,string,mss_device1
