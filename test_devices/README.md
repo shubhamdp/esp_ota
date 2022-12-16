@@ -1,7 +1,7 @@
 ## Test Device Details
 
 ### ESP Launchpad Link
-https://espressif.github.io/esp-launchpad/?flashConfigURL=https://shubhamdp.github.io/esp_ota/test_devices/launchpad_config.toml
+[https://espressif.github.io/esp-launchpad/?flashConfigURL=https://shubhamdp.github.io/esp_ota/test_devices/launchpad_config.toml](https://espressif.github.io/esp-launchpad/?flashConfigURL=https://shubhamdp.github.io/esp_ota/test_devices/launchpad_config.toml)
 
 ---
 
