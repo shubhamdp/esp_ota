@@ -1,5 +1,12 @@
 #### MSS Test Devices
 
+---
+<a href="https://espressif.github.io/esp-launchpad/?flashConfigURL=https://shubhamdp.github.io/esp_ota/internal_test_dev/launchpad_config.toml" target="_blank" rel="noopener noreferrer">
+    <img alt="Try it with ESP Launchpad" src="https://espressif.github.io/esp-launchpad/assets/try_with_launchpad.png" width="250" height="70">
+</a>
+
+---
+
 # Test Data
 
 |   | APID | Discriminator | Passcode | Serial Number | Vendor ID | Product Id | Unique Id for RID (base64) |
