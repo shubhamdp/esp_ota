@@ -7,7 +7,7 @@
 
 ---
 
-# Test Data
+#### Test Data
 
 |   | APID | Discriminator | Passcode | Serial Number | Vendor ID | Product Id | Unique Id for RID (base64) |
 |---|------|---------------|----------|---------------|-----------|------------|----------------------------|
@@ -18,3 +18,14 @@
 | 5 | NZqb | 3561          | 71846142 | ffs_device4   | 65521     | 32769      | RH+DDXHBVJk5UU4fSEiMuQ==   |
 
 
+---
+#### Some Hacks
+- Base64 to hex string
+    ```
+    echo iphlNnOvSs6vDxdwD2kuhg== | base64 -d | xxd -p
+    ```
+
+- Hex string to base64
+    ```
+    echo 59ddde05556b3e462d678cf17fdd3d8a | xxd -p -r | base64
+    ```
