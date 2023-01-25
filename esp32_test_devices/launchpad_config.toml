@@ -1,0 +1,8 @@
+esp_toml_version = 1.0
+firmware_images_url = "https://shubhamdp.github.io/esp_ota/esp32_test_devices/"
+
+supported_apps = ["ESP32_Device_1"]
+
+[ESP32_Device_1]
+chipsets = ["ESP32"]
+image.esp32 = "esp32_device1.bin"
