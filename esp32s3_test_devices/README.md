@@ -18,6 +18,7 @@
   "passcode": 36921282,
 }
 ```
+- device serial number : "esp32s3_device1"
 
 #### Onboarding codes
 - QRCode: MT:634J06PF15K3S06OT00
