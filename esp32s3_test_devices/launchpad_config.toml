@@ -5,4 +5,4 @@ supported_apps = ["ESP32S3_Device_1"]
 
 [ESP32S3_Device_1]
 chipsets = ["ESP32S3"]
-image.esp32 = "esp32s3_device1.bin"
+image.esp32s3 = "esp32s3_device1.bin"
