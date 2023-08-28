@@ -4,11 +4,13 @@ firmware_images_url = "https://shubhamdp.github.io/esp_ota/ashwin_amazon/"
 supported_apps = ["C3_First_Light", "C3_Second_Light"]
 
 [C3_First_Light]
-chipsets = ["ESP32C3"]
-image.esp32c3 = "amazon_dev1.bin"
+chipsets = ["ESP"]
+image.esp.parts = ["https://shubhamdp.github.io/esp_ota/ashwin_amazon/amazon_dev1.bin"]
+image.esp.addresses = ["0x0"]
 readme.text = ["https://raw.githubusercontent.com/shubhamdp/esp_ota/main/ashwin_amazon/README.md"]
 
 [C3_Second_Light]
-chipsets = ["ESP32C3"]
-image.esp32c3 = "amazon_dev2.bin"
+chipsets = ["ESP"]
+image.esp.parts = ["https://shubhamdp.github.io/esp_ota/ashwin_amazon/amazon_dev2.bin"]
+image.esp.addresses = ["0x0"]
 readme.text = ["https://raw.githubusercontent.com/shubhamdp/esp_ota/main/ashwin_amazon/README.md"]
