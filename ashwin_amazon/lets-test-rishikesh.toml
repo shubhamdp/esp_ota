@@ -2,7 +2,7 @@ esp_toml_version = 1.0
 firmware_images_url = "https://espressif.github.io/esp-matter/"
 
 supported_apps = ["light","light_switch"]
-setup_payload_logo = "https://upload.wikimedia.org/wikipedia/commons/f/fd/Matter_logo.jpg"
+setup_payload_logo = "https://iot.eetimes.com/wp-content/uploads/2022/10/221026-matter.jpg"
 setup_payload = "MT:Y.K9042C00KA0648G00"
 
 [light]
