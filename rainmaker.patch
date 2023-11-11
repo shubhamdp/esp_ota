@@ -1,0 +1,167 @@
+diff --git a/src/app/zap-templates/zcl/data-model/all.xml b/src/app/zap-templates/zcl/data-model/all.xml
+index b05c47025c..e011249a3e 100644
+--- a/src/app/zap-templates/zcl/data-model/all.xml
++++ b/src/app/zap-templates/zcl/data-model/all.xml
+@@ -19,6 +19,8 @@
+    <xi:include href="chip/color-control-cluster.xml" />
+    <xi:include href="chip/content-launch-cluster.xml" />
+    <xi:include href="chip/descriptor-cluster.xml" />
++   <xi:include href="chip/matter_controller.xml" />
++   <xi:include href="chip/rainmaker.xml" />
+    <xi:include href="chip/diagnostic-logs-cluster.xml" />
+    <xi:include href="chip/door-lock-cluster.xml" />
+    <xi:include href="chip/ethernet-network-diagnostics-cluster.xml" />
+diff --git a/src/app/zap-templates/zcl/data-model/chip/matter_controller.xml b/src/app/zap-templates/zcl/data-model/chip/matter_controller.xml
+new file mode 100644
+index 0000000000..762f25664f
+--- /dev/null
++++ b/src/app/zap-templates/zcl/data-model/chip/matter_controller.xml
+@@ -0,0 +1,61 @@
++<?xml version="1.0"?>
++<!--
++Copyright (c) 2023 Project CHIP Authors
++
++Licensed under the Apache License, Version 2.0 (the "License");
++you may not use this file except in compliance with the License.
++You may obtain a copy of the License at
++
++    http://www.apache.org/licenses/LICENSE-2.0
++
++Unless required by applicable law or agreed to in writing, software
++distributed under the License is distributed on an "AS IS" BASIS,
++WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++See the License for the specific language governing permissions and
++limitations under the License.
++-->
++<configurator>
++  <domain name="CHIP"/>
++  <cluster>
++
++    <name>MatterController</name>
++    <domain>CHIP</domain>
++    <code>0x131BFC01</code>
++    <define>MATTER_CONTROLLER_CLUSTER</define>
++
++    <description>Attributes and commands for matter_controller cluster.</description>
++
++    <globalAttribute side="either" code="0xFFFD" value="2"/>
++
++    <attribute side="server" code="0x0000" define="REFRESH_TOKEN" type="char_string" length="2048">RefreshToken</attribute>
++    <attribute side="server" code="0x0001" define="ACCESS_TOKEN" type="char_string" length="2048">AccessToken</attribute>
++    <attribute side="server" code="0x0002" define="AUTHORIZED" type="boolean" default="0">Authorized</attribute>
++    <attribute side="server" code="0x0003" define="USER_NOC_INSTALLED" type="boolean" default="0">UserNOCInstalled</attribute>
++    <attribute side="server" code="0x0004" define="ENDPOINT_URL" type="char_string" length="64">EndpointUrl</attribute>
++    <attribute side="server" code="0x0005" define="RMAKER_GROUP_ID" type="char_string" length="24">RmakerGroupId</attribute>
++    <attribute side="server" code="0x0006" define="USER_NOC_FABRIC_INDEX" type="int8u" default="0">UserNOCFabricIndex</attribute>
++
++    <command source="client" code="0x00" name="AppendRefreshToken" optional="false">
++      <description>AppendRefreshToken command.</description>
++      <arg name="AppendedRefreshToken" type="char_string"/>
++    </command>
++
++    <command source="client" code="0x01" name="ResetRefreshToken" optional="false">
++      <description>ResetRefreshToken command.</description>
++    </command>
++
++    <command source="client" code="0x02" name="Authorize" optional="false">
++      <description>Authorize command.</description>
++      <arg name="EndpointUrl" type="char_string"/>
++    </command>
++
++    <command source="client" code="0x03" name="UpdateUserNOC" optional="false">
++      <description>UpdateUserNOC command.</description>
++    </command>
++
++    <command source="client" code="0x04" name="UpdateDeviceList" optional="false">
++      <description>UpdateDeviceList command.</description>
++    </command>
++
++  </cluster>
++</configurator>
+diff --git a/src/app/zap-templates/zcl/data-model/chip/rainmaker.xml b/src/app/zap-templates/zcl/data-model/chip/rainmaker.xml
+new file mode 100644
+index 0000000000..99a12f9932
+--- /dev/null
++++ b/src/app/zap-templates/zcl/data-model/chip/rainmaker.xml
+@@ -0,0 +1,46 @@
++<?xml version="1.0"?>
++<!--
++Copyright (c) 2023 Project CHIP Authors
++
++Licensed under the Apache License, Version 2.0 (the "License");
++you may not use this file except in compliance with the License.
++You may obtain a copy of the License at
++
++    http://www.apache.org/licenses/LICENSE-2.0
++
++Unless required by applicable law or agreed to in writing, software
++distributed under the License is distributed on an "AS IS" BASIS,
++WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++See the License for the specific language governing permissions and
++limitations under the License.
++-->
++<configurator>
++  <domain name="CHIP"/>
++  <cluster>
++
++    <name>Rainmaker</name>
++    <domain>CHIP</domain>
++    <code>0x131BFC00</code>
++    <define>RAINMAKER_CLUSTER</define>
++
++    <description>Attributes and commands for rainmaker cluster.</description>
++
++    <globalAttribute side="either" code="0xFFFD" value="2"/>
++
++    <attribute side="server" code="0x0000" define="STATUS" type="boolean" default="0">Status</attribute>
++    <attribute side="server" code="0x0001" define="RMAKER_NODE_ID" type="char_string" length="40">RmakerNodeId</attribute>
++    <attribute side="server" code="0x0002" define="CHALLENGE_RESPONSE" type="char_string" length="150">ChallengeResponse</attribute>
++    <attribute side="server" code="0x0003" define="CHALLENGE" type="char_string" length="40" writable="true">Challenge</attribute>
++
++    <command source="client" code="0x00" name="Configuration" optional="false">
++      <description>Configuration command.</description>
++      <arg name="ConfigurationArg" type="char_string"/>
++    </command>
++
++    <command source="client" code="0x01" name="SignData" optional="false">
++      <description>SignData command.</description>
++      <arg name="SignDataArg" type="char_string"/>
++    </command>
++
++  </cluster>
++</configurator>
+diff --git a/src/app/zap-templates/zcl/zcl.json b/src/app/zap-templates/zcl/zcl.json
+index 60f1eb1e62..5c7d5487f5 100644
+--- a/src/app/zap-templates/zcl/zcl.json
++++ b/src/app/zap-templates/zcl/zcl.json
+@@ -89,6 +89,8 @@
+         "ha-devices.xml",
+         "lo-devices.xml",
+         "zll-devices.xml",
++        "matter_controller.xml",
++        "rainmaker.xml",
+         "types/color-control.xml",
+         "types/door-lock.xml",
+         "types/occupancy-sensing.xml",
+diff --git a/src/app/zap_cluster_list.json b/src/app/zap_cluster_list.json
+index 9d0a3dfc08..570909d99a 100644
+--- a/src/app/zap_cluster_list.json
++++ b/src/app/zap_cluster_list.json
+@@ -97,6 +97,8 @@
+         "WAKE_ON_LAN_CLUSTER": ["wake-on-lan-server"],
+         "WIFI_NETWORK_DIAGNOSTICS_CLUSTER": ["wifi-network-diagnostics-server"],
+         "WINDOW_COVERING_CLUSTER": ["window-covering-server"],
++        "RAINMAKER_CLUSTER": ["rainmaker-server"],
++        "MATTER_CONTROLLER_CLUSTER": ["matter-controller-server"],
+         "ZLL_COMMISSIONING_CLUSTER": []
+     },
+     "ClientDirectories": {
+@@ -184,6 +186,8 @@
+         "WAKE_ON_LAN_CLUSTER": [],
+         "WIFI_NETWORK_DIAGNOSTICS_CLUSTER": [],
+         "WINDOW_COVERING_CLUSTER": [],
++        "MATTER_CONTROLLER_CLUSTER": [],
++        "RAINMAKER_CLUSTER": [],
+         "ZLL_COMMISSIONING_CLUSTER": []
+     }
+ }
