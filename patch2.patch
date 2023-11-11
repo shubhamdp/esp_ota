@@ -1,0 +1,15 @@
+diff --git a/src/controller/data_model/BUILD.gn b/src/controller/data_model/BUILD.gn
+index de4f341307..dcd177acfb 100644
+--- a/src/controller/data_model/BUILD.gn
++++ b/src/controller/data_model/BUILD.gn
+@@ -172,6 +172,10 @@ if (current_os == "android" || build_java_matter_controller) {
+       "jni/ElectricalMeasurementClient-InvokeSubscribeImpl.cpp",
+       "jni/UnitTestingClient-ReadImpl.cpp",
+       "jni/UnitTestingClient-InvokeSubscribeImpl.cpp",
++      "jni/RainmakerClient-InvokeSubscribeImpl.cpp",
++      "jni/RainmakerClient-ReadImpl.cpp",
++      "jni/MatterControllerClient-InvokeSubscribeImpl.cpp",
++      "jni/MatterControllerClient-ReadImpl.cpp",
+       "jni/ClientMonitoringClient-ReadImpl.cpp",
+       "jni/ClientMonitoringClient-InvokeSubscribeImpl.cpp",
+     ]
