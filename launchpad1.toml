@@ -1,6 +1,6 @@
 esp_toml_version = 1.0
 firmware_images_url = "https://shubhamdp.github.io/esp-matter/"
-config_readme_url = "https://raw.githubusercontent.com/shubhamdp/esp_ota/main/build-cfg.md"
+config_readme_url = "https://github.com/shubhamdp/esp_ota/raw/main/build-cfg.md"
 
 supported_apps = ["thread_light","wifi_light","wifi_light_switch","wifi_rainmaker_matter_light"]
 
