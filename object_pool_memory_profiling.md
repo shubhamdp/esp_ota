@@ -118,6 +118,7 @@ Total image size: 1640776 bytes (.bin may be padded larger)
 | **Fabric Is Committed**            | 25272               | 9216               | 14200               |
 | **Commissioning Complete**         | 25292               | 9216               | 14200               |
 | **Commissioning Window Closed**    | 28616               | 9216               | 14200               |
+| **BLE deinitialized and memory reclaimed** | 94520       | 31744              | 18136               |
 | **Idle**                           | 94532               | 31744              | 18992               |
 
 
