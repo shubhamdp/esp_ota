@@ -1,6 +1,7 @@
 ## object Pool in BSS
 
 #### Memory Type Usage Summary
+```
 ┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
 ┃ Memory Type/Section ┃ Used [bytes] ┃ Used [%] ┃ Remain [bytes] ┃ Total [bytes] ┃
 ┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
@@ -18,7 +19,7 @@
 │    .force_fast      │            4 │     0.05 │                │               │
 └─────────────────────┴──────────────┴──────────┴────────────────┴───────────────┘
 Total image size: 1640776 bytes (.bin may be padded larger)
-
+```
 
 #### Per-archive contributions to ELF File
 
@@ -123,6 +124,7 @@ Total image size: 1640776 bytes (.bin may be padded larger)
 ## Object Pool in Heap
 
 #### Memory Type Usage Summary
+```
 ┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
 ┃ Memory Type/Section ┃ Used [bytes] ┃ Used [%] ┃ Remain [bytes] ┃ Total [bytes] ┃
 ┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
@@ -140,7 +142,7 @@ Total image size: 1640776 bytes (.bin may be padded larger)
 │    .force_fast      │            4 │     0.05 │                │               │
 └─────────────────────┴──────────────┴──────────┴────────────────┴───────────────┘
 Total image size: 1642164 bytes (.bin may be padded larger)
-
+```
 
 #### Per-archive contributions to ELF File
 
